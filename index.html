@@ -1,119 +1,1835 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
-    <style type="text/css">
-      * {
-        margin: 0;
-        padding: 0;
-        border: none;
-        list-style: none;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-         box-sizing: border-box;
-      }
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-      body {
-        font: 15px/1.25 'Alef';
-        color: #011111;
-        margin-top: 150px;
-      }
 
-      form {
-        margin: 70px auto;
-        background: #F0F0F0;
-        width: 365px;
-        padding: 40px;
-        text-align: center;
-        -webkit-border-radius: 6px;
-        -moz-border-radius: 6px;
-        -ms-border-radius: 6px;
-        -o-border-radius: 6px;
-        border-radius: 6px;
-      }
-          
-      form > h1 {
-        color: black;
-        text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.7);
-        font-weight: 400;
-        margin-bottom: 20px;
-      }
 
-      input {
-        background: rgba(0, 0, 0, 0.1);
-        color: #000;
-       /* text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);*/
-        display: block;
-        width: 269px;
-        padding: 15px;
-        margin-top: 20px;
-        margin-bottom: 10px;
-        margin-left: 10px;
-        -webkit-border-radius: 6px;
-        -moz-border-radius: 6px;
-        -ms-border-radius: 6px;
-        -o-border-radius: 6px;
-        border-radius: 6px;
-        -webkit-transition: all 0.1s ease-in-out;
-        -moz-transition: all 0.1s ease-in-out;
-        transition: all 0.1s ease-in-out;
-        outline: none;
-      }
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
 
-      input:focus {
-        background: rgba(0, 0, 0, 0.2);
-        -webkit-transition: all 0.1s ease-in-out;
-        -moz-transition: all 0.1s ease-in-out;
-        transition: all 0.1s ease-in-out;
-      }
+<head>
+  <title>Linux helper</title>
 
-      ::-webkit-input-placeholder {
-        color: rgba(0, 0, 0, 0.5);
-      }
+  <script type="text/javascript">(function() { (function(){function c(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(l){}};this.tick("start",null,a)}var a;if(window.performance)var e=(a=window.performance.timing)&&a.responseStart;var h=0<e?new c(e):new c;window.jstiming={Timer:c,load:h};if(a){var b=a.navigationStart;0<b&&e>=b&&(window.jstiming.srt=e-b)}if(a){var d=window.jstiming.load;0<b&&e>=b&&(d.tick("_wtsrt",void 0,b),d.tick("wtsrt_","_wtsrt",
+e),d.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),d&&0<b&&(d.tick("_tbnd",void 0,window.chrome.csi().startE),d.tick("tbnd_","_tbnd",b))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,d&&0<b&&(d.tick("_tbnd",void 0,window.external.startE),d.tick("tbnd_","_tbnd",b))),a&&(window.jstiming.pt=a)}catch(k){}})();window.tickAboveFold=function(c){var a=0;if(c.offsetParent){do a+=c.offsetTop;while(c=c.offsetParent)}c=a;750>=c&&window.jstiming.load.tick("aft")};var f=!1;function g(){f||(f=!0,window.jstiming.load.tick("firstScrollTime"))}window.addEventListener?window.addEventListener("scroll",g,!1):window.attachEvent("onscroll",g);
+ })();</script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="https://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Linux helper - Atom" href="http://linuxhelperssingatiya.blogspot.com/feeds/posts/default" />
+<link rel="alternate" type="application/rss+xml" title="Linux helper - RSS" href="http://linuxhelperssingatiya.blogspot.com/feeds/posts/default?alt=rss" />
+<link rel="service.post" type="application/atom+xml" title="Linux helper - Atom" href="https://www.blogger.com/feeds/7667983272254077387/posts/default" />
+<link rel="stylesheet" type="text/css" href="https://www.blogger.com/static/v1/v-css/50269083-blog_controls.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.blogger.com/dyn-css/authorization.css?targetBlogID=7667983272254077387&zx=745607c5-cbd3-45c5-8eb1-8cd7ac7d6001"/>
 
-      :-moz-placeholder {
-        color: rgba(0, 0, 0, 0.5);
-      }
 
-      ::-moz-placeholder {
-        color: rgba(0, 0, 0, 0.5);
-      }
+  <style type="text/css">
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:     Rounders
+Date:     27 Feb 2004
+----------------------------------------------- */
 
-      :-ms-input-placeholder {
-        color: rgba(0, 0, 0, 0.5);
+
+body {
+  background:#aba;
+  margin:0;
+  padding:20px 10px;
+  text-align:center;
+  font:x-small/1.5em "Trebuchet MS",Verdana,Arial,Sans-serif;
+  color:#333;
+  font-size/* */:/**/small;
+  font-size: /**/small;
+  }
+
+
+/* Page Structure
+----------------------------------------------- */
+/* The images which help create rounded corners depend on the 
+   following widths and measurements. If you want to change 
+   these measurements, the images will also need to change.
+   */
+@media all {
+  #content {
+    width:740px;
+    margin:0 auto;
+    text-align:left;
+    }
+  #main {
+    width:485px;
+    float:left;
+    background:#fff url("https://resources.blogblog.com/blogblog/data/rounders/corners_main_bot.gif") no-repeat left bottom;
+    margin:15px 0 0;
+    padding:0 0 10px;
+    color:#000;
+    font-size:97%;
+    line-height:1.5em;
+    }
+  #main2 {
+    float:left;
+    width:100%;
+    background:url("https://resources.blogblog.com/blogblog/data/rounders/corners_main_top.gif") no-repeat left top;
+    padding:10px 0 0;
+    }
+  #main3 {
+    background:url("https://resources.blogblog.com/blogblog/data/rounders/rails_main.gif") repeat-y;
+    padding:0;
+    }
+  #sidebar {
+    width:240px;
+    float:right;
+    margin:15px 0 0;
+    font-size:97%;
+    line-height:1.5em;
+    }
+  }
+@media handheld {
+  #content {
+    width:90%;
+    }
+  #main {
+    width:100%;
+    float:none;
+    background:#fff;
+    }
+  #main2 {
+    float:none;
+    background:none;
+    }
+  #main3 {
+    background:none;
+    padding:0;
+    }
+  #sidebar {
+    width:100%;
+    float:none;
+    }
+  }
+
+
+/* Links
+----------------------------------------------- */
+a:link {
+  color:#258;
+  }
+a:visited {
+  color:#666;
+  }
+a:hover {
+  color:#c63;
+  }
+a img {
+  border-width:0;
+  }
+
+
+/* Blog Header
+----------------------------------------------- */
+@media all {
+  #header {
+    background:#456 url("https://resources.blogblog.com/blogblog/data/rounders/corners_cap_top.gif") no-repeat left top;
+    margin:0 0 0;
+    padding:8px 0 0;
+    color:#fff;
+    }
+  #header div {
+    background:url("https://resources.blogblog.com/blogblog/data/rounders/corners_cap_bot.gif") no-repeat left bottom;
+    padding:0 15px 8px;
+    }
+  }
+@media handheld {
+  #header {
+    background:#456;
+    }
+  #header div {
+    background:none;
+    }
+  }
+#blog-title {
+  margin:0;
+  padding:10px 30px 5px;
+  font-size:200%;
+  line-height:1.2em;
+  }
+#blog-title a {
+  text-decoration:none;
+  color:#fff;
+  }
+#description {
+  margin:0;
+  padding:5px 30px 10px;
+  font-size:94%;
+  line-height:1.5em;
+  }
+
+
+/* Posts
+----------------------------------------------- */
+.date-header {
+  margin:0 28px 0 43px;
+  font-size:85%;
+  line-height:2em;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#357;
+  }
+.post {
+  margin:.3em 0 25px;
+  padding:0 13px;
+  border:1px dotted #bbb;
+  border-width:1px 0;
+  }
+.post-title {
+  margin:0;
+  font-size:135%;
+  line-height:1.5em;
+  background:url("https://resources.blogblog.com/blogblog/data/rounders/icon_arrow.gif") no-repeat 10px .5em;
+  display:block;
+  border:1px dotted #bbb;
+  border-width:0 1px 1px;
+  padding:2px 14px 2px 29px;
+  color:#333;
+  }
+a.title-link, .post-title strong {
+  text-decoration:none;
+  display:block;
+  }
+a.title-link:hover {
+  background-color:#ded;
+  color:#000;
+  }
+.post-body {
+  border:1px dotted #bbb;
+  border-width:0 1px 1px;
+  border-bottom-color:#fff;
+  padding:10px 14px 1px 29px;
+  }
+html>body .post-body {
+  border-bottom-width:0;
+  }
+.post p {
+  margin:0 0 .75em;
+  }
+p.post-footer {
+  background:#ded;
+  margin:0;
+  padding:2px 14px 2px 29px;
+  border:1px dotted #bbb;
+  border-width:1px;
+  border-bottom:1px solid #eee;
+  font-size:100%;
+  line-height:1.5em;
+  color:#666;
+  text-align:right;
+  }
+html>body p.post-footer {
+  border-bottom-color:transparent;
+  }
+p.post-footer em {
+  display:block;
+  float:left;
+  text-align:left;
+  font-style:normal;
+  }
+a.comment-link {
+  /* IE5.0/Win doesn't apply padding to inline elements,
+     so we hide these two declarations from it */
+  background/* */:/**/url("https://resources.blogblog.com/blogblog/data/rounders/icon_comment.gif") no-repeat 0 45%;
+  padding-left:14px;
+  }
+html>body a.comment-link {
+  /* Respecified, for IE5/Mac's benefit */
+  background:url("https://resources.blogblog.com/blogblog/data/rounders/icon_comment.gif") no-repeat 0 45%;
+  padding-left:14px;
+  }
+.post img {
+  margin:0 0 5px 0;
+  padding:4px;
+  border:1px solid #ccc;
+  }
+blockquote {
+  margin:.75em 0;
+  border:1px dotted #ccc;
+  border-width:1px 0;
+  padding:5px 15px;
+  color:#666;
+  }
+.post blockquote p {
+  margin:.5em 0;
+  }
+
+
+/* Comments
+----------------------------------------------- */
+#comments {
+  margin:-25px 13px 0;
+  border:1px dotted #ccc;
+  border-width:0 1px 1px;
+  padding:20px 0 15px 0;
+  }
+#comments h4 {
+  margin:0 0 10px;
+  padding:0 14px 2px 29px;
+  border-bottom:1px dotted #ccc;
+  font-size:120%;
+  line-height:1.4em;
+  color:#333;
+  }
+#comments-block {
+  margin:0 15px 0 9px;
+  }
+.comment-data {
+  background:url("https://resources.blogblog.com/blogblog/data/rounders/icon_comment.gif") no-repeat 2px .3em;
+  margin:.5em 0;
+  padding:0 0 0 20px;
+  color:#666;
+  }
+.comment-poster {
+  font-weight:bold;
+  }
+.comment-body {
+  margin:0 0 1.25em;
+  padding:0 0 0 20px;
+  }
+.comment-body p {
+  margin:0 0 .5em;
+  }
+.comment-timestamp {
+  margin:0 0 .5em;
+  padding:0 0 .75em 20px;
+  color:#666;
+  }
+.comment-timestamp a:link {
+  color:#666;
+  }
+.deleted-comment {
+  font-style:italic;
+  color:gray;
+  }
+.paging-control-container {
+  float: right;
+  margin: 0px 6px 0px 0px;
+  font-size: 80%;
+}
+.unneeded-paging-control {
+  visibility: hidden;
+}
+
+
+/* Profile
+----------------------------------------------- */
+@media all {
+  #profile-container {
+    background:#cdc url("https://resources.blogblog.com/blogblog/data/rounders/corners_prof_bot.gif") no-repeat left bottom;
+    margin:0 0 15px;
+    padding:0 0 10px;
+    color:#345;
+    }
+  #profile-container h2 {
+    background:url("https://resources.blogblog.com/blogblog/data/rounders/corners_prof_top.gif") no-repeat left top;
+    padding:10px 15px .2em;
+    margin:0;
+    border-width:0;
+    font-size:115%;
+    line-height:1.5em;
+    color:#234;
+    }
+  }
+@media handheld {
+  #profile-container {
+    background:#cdc;
+    }
+  #profile-container h2 {
+    background:none;
+    }
+  }
+.profile-datablock {
+  margin:0 15px .5em;
+  border-top:1px dotted #aba;
+  padding-top:8px;
+  }
+.profile-img {display:inline;}
+.profile-img img {
+  float:left;
+  margin:0 10px 5px 0;
+  border:4px solid #fff;
+  }
+.profile-data strong {
+  display:block;
+  }
+#profile-container p {
+  margin:0 15px .5em;
+  }
+#profile-container .profile-textblock {
+  clear:left;
+  }
+#profile-container a {
+  color:#258;
+  }
+.profile-link a {
+  background:url("https://resources.blogblog.com/blogblog/data/rounders/icon_profile.gif") no-repeat 0 .1em;
+  padding-left:15px;
+  font-weight:bold;
+  }
+ul.profile-datablock {
+  list-style-type:none;
+  }
+
+
+/* Sidebar Boxes
+----------------------------------------------- */
+@media all {
+  .box {
+    background:#fff url("https://resources.blogblog.com/blogblog/data/rounders/corners_side_top.gif") no-repeat left top;
+    margin:0 0 15px;
+    padding:10px 0 0;
+    color:#666;
+    }
+  .box2 {
+    background:url("https://resources.blogblog.com/blogblog/data/rounders/corners_side_bot.gif") no-repeat left bottom;
+    padding:0 13px 8px;
+    }
+  }
+@media handheld {
+  .box {
+    background:#fff;
+    }
+  .box2 {
+    background:none;
+    }
+  }
+.sidebar-title {
+  margin:0;
+  padding:0 0 .2em;
+  border-bottom:1px dotted #9b9;
+  font-size:115%;
+  line-height:1.5em;
+  color:#333;
+  }
+.box ul {
+  margin:.5em 0 1.25em;
+  padding:0 0px;
+  list-style:none;
+  }
+.box ul li {
+  background:url("https://resources.blogblog.com/blogblog/data/rounders/icon_arrow_sm.gif") no-repeat 2px .25em;
+  margin:0;
+  padding:0 0 3px 16px;
+  margin-bottom:3px;
+  border-bottom:1px dotted #eee;
+  line-height:1.4em;
+  }
+.box p {
+  margin:0 0 .6em;
+  }
+
+
+/* Footer
+----------------------------------------------- */
+#footer {
+  clear:both;
+  margin:0;
+  padding:15px 0 0;
+  }
+@media all {
+  #footer div {
+    background:#456 url("https://resources.blogblog.com/blogblog/data/rounders/corners_cap_top.gif") no-repeat left top;
+    padding:8px 0 0;
+    color:#fff;
+    }
+  #footer div div {
+    background:url("https://resources.blogblog.com/blogblog/data/rounders/corners_cap_bot.gif") no-repeat left bottom;
+    padding:0 15px 8px;
+    }
+  }
+@media handheld {
+  #footer div {
+    background:#456;
+    }
+  #footer div div {
+    background:none;
+    }
+  }
+#footer hr {display:none;}
+#footer p {margin:0;}
+#footer a {color:#fff;}
+
+
+/* Feeds
+----------------------------------------------- */
+#blogfeeds {
+  }
+#postfeeds {
+  padding:0 15px 0;
+  }
+  </style>
+
+
+<link rel="openid.server" href="https://www.blogger.com/openid-server.g" />
+<!-- --><style type="text/css">@import url(https://www.blogger.com/static/v1/v-css/navbar/3334278262-classic.css);
+div.b-mobile {display:none;}
+</style>
+
+</head>
+
+
+
+<body><script type="text/javascript">
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener('load',
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent('onload', function(){ object[attribute] = val; });
       }
-          
-      button {
-        position: relative;
-        display: block;
-        margin-top: 15px;
-        margin-bottom: 15px;
-        margin-left: 10px;
-        padding: 17px;
-        width: 270px;
-        -webkit-border-radius: 6px;
-        -moz-border-radius: 6px;
-        -ms-border-radius: 6px;
-        -o-border-radius: 6px;
-        border-radius: 6px;
-        -webkit-transition: all 0.1s ease-in-out;
-        -moz-transition: all 0.1s ease-in-out;
-        transition: all 0.1s ease-in-out;
-        font-size: 1.2em;
-        background: #333366;
-        color: #f4f4f4;
-        /* box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.1);*/
-        cursor: pointer;
-      }
-    </style>
-  </head>
+    }
+  </script>
+<div id="navbar-iframe-container"></div>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript">
+      gapi.load("gapi.iframes:gapi.iframes.style.bubble", function() {
+        if (gapi.iframes && gapi.iframes.getContext) {
+          gapi.iframes.getContext().openChild({
+              url: 'https://www.blogger.com/navbar.g?targetBlogID\x3d7667983272254077387\x26blogName\x3dLinux+helper\x26publishMode\x3dPUBLISH_MODE_BLOGSPOT\x26navbarType\x3dLIGHT\x26layoutType\x3dCLASSIC\x26searchRoot\x3dhttp://linuxhelperssingatiya.blogspot.com/search\x26blogLocale\x3den_GB\x26v\x3d2\x26homepageUrl\x3dhttp://linuxhelperssingatiya.blogspot.com/\x26vt\x3d9089154084787105331',
+              where: document.getElementById("navbar-iframe-container"),
+              id: "navbar-iframe"
+          });
+        }
+      });
+    </script>
+
+
+
+<!-- Begin #content - Centers all content and provides edges for floated columns -->
+
+<div id="content">
+
+
+
+<!-- Blog Header -->
+
+<div id="header"><div>
+
+  <h1 id="blog-title">
+    
+	Linux helper
+	
+  </h1>
+  <p id="description">Helps Linux geeks to explore their knowledge</p>
+
+</div></div>
+
+
+
+
+
+<!-- Begin #main - Contains main-column blog content -->
+
+<div id="main"><div id="main2"><div id="main3">
+
+
+
+    
+  <h2 class="date-header">Monday, 9 October 2017</h2>
   
-  <body>
-    <form action="" method="post">
-      <img src="{{ url_for('static', filename='img/gp-full-logo.png') }}" alt="gp-logo" style="width: 280; padding-bottom:10px;" />
-      <input type="text" name="username" placeholder="Username" />
-      <input type="password" name="password" placeholder="Password" />
-      <button class="btn btn-primary btn-lg"> Login </button>
-    </form>
-  </body>
+
+         <!-- Begin .post -->
+
+  <div class="post"><a name="1100230516598808190"></a>
+
+     
+	 
+    <h3 class="post-title">
+	 How to connect two linux machine 
+    </h3>
+	 
+    
+
+         <div class="post-body">
+
+          <p>
+      <div style="clear:both;"></div><p dir="ltr"><br>
+<u>Hello</u> guys,</p>
+<p dir="ltr">It is difficult to all newbies to connect two&#160;&#160;&#160; PC via some network settings.<br>
+Let's do it step by steps-</p>
+<p dir="ltr"><b>Ubuntu </b><b>machine</b><b> -&gt; </b><b>raspi</b><b> (</b><b>static</b><b> </b><b>IP</b><b>)</b></p>
+<p dir="ltr">1. In your Ubuntu laptop go to network setting<br>
+2. Create new connection <br>
+3. Name it 'static connection'<br>
+4. Go to ipv4 setting -<br>
+Select manual <br>
+Insert address -192.168.1.3<br>
+And netmask address- 255.255.255.0</p>
+<p dir="ltr">Then save this configuration.</p>
+<p dir="ltr">Now connect screen , keyboard to your raspi.</p>
+<p dir="ltr">Edit interface file-</p>
+<p dir="ltr"><i>sudo</i><i> nano /etc/network/</i><i>interfaces</i></p>
+<p dir="ltr">Content would be like below.</p>
+<p dir="ltr">auto lo<br>
+iface lo inet loopback<br>
+iface eth0 inet dhcp </p>
+<p dir="ltr">You need to change it to look like as below.</p>
+<p dir="ltr">auto lo<br>
+iface lo inet loopback<br>
+iface eth0 inet static <br>
+address 192.168.1.2<br>
+netmask 255.255.255.0 <br>
+gateway 192.168.1.254</p>
+<p dir="ltr">Press Ctrl+x and y to save the changes<br>
+Now either reboot or execute below commands.</p>
+<p dir="ltr"><i>sudo</i><i> </i><i>ifdown</i><i> </i><i>eth0</i><i> </i><br>
+<i>sudo</i><i> </i><i>ifup</i><i> </i><i>eth0</i></p>
+<p dir="ltr">Now connect LAN cable between your linux laptop and raspi.<br>
+And select static connection for network.</p>
+<p dir="ltr">Now ssh to raspi by following command.</p>
+<p dir="ltr"><i>ssh</i><i> </i><i>pi@192</i><i>.168.1.2</i> </p>
+<p dir="ltr">it will provide you terminal of raspi in your laptop terminal.</p>
+<p dir="ltr"><b>Ubuntu </b><b>machine</b><b> -&gt; </b><b>raspi</b><b> (</b><b>dhcp</b> <b>IP</b><b>)</b></p>
+<p dir="ltr">1. In your Ubuntu laptop go to network setting<br>
+2. Create new connection <br>
+3. Name it 'share connection'<br>
+4. Go to ipv4 setting -<br>
+Select share to other computer</p>
+<p dir="ltr">Then save this configuration.</p>
+<p dir="ltr">Now connect screen , keyboard to your raspi.</p>
+<p dir="ltr">Edit interface file-</p>
+<p dir="ltr"><i>sudo</i><i> nano /etc/network/</i><i>interfaces</i></p>
+<p dir="ltr">Content should&#160; be like below.</p>
+<p dir="ltr">auto lo<br>
+iface lo inet loopback<br>
+iface eth0 inet dhcp</p>
+<p dir="ltr">You need to change it to look like as above </p>
+<p dir="ltr">Press Ctrl+x and y to save the changes<br>
+Now either reboot or execute below commands.</p>
+<p dir="ltr"><b><i>sudo</i></b><b><i> </i></b><b><i>ifdown</i></b><b><i> </i></b><b><i>eth0</i></b><b><i> </i></b><br>
+<b><i>sudo</i></b><b><i> </i></b><b><i>ifup</i></b><b><i> </i></b><b><i>eth0</i></b></p>
+<p dir="ltr">Now connect LAN cable between your linux laptop and raspi.<br>
+And select share connection for network.</p>
+<p dir="ltr">Now do <b><i>ifconfig</i></b> in your laptop.</p>
+<p dir="ltr">And note your computer's IP over ethernet interface.<br>
+Let's assume it is 10.42.0.1</p>
+<p dir="ltr">Now do <b><i>nmap</i></b><b><i> -</i></b><b><i>sP</i></b><b><i>&#160; 10.42.0.1/24</i></b><br>
+This will show you all hosts up in this ip domain.</p>
+<p dir="ltr">So you will get two ip's here . one is your laptops IP and other is of raspi.<br>
+I.e. 10.42.0.13<br>
+Now ssh to raspi by following command.</p>
+<p dir="ltr"><b><i>ssh</i></b><b><i> </i></b><b><i>pi@</i></b><b><i>10.42.0.13</i></b></p>
+<p dir="ltr">Replace this IP as per nmap reply in your system. </p>
+<p dir="ltr">it will provide you terminal of raspi in your laptop terminal. <br>
+Now connect your laptop to WiFi .</p>
+<p dir="ltr">And you will have internet&nbsp; in raspi.<br>
+This connection provide you access to raspi terminal and internet to raspi.</p>
+<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/communication%20between%20pc%20and%20raspi">communication between pc and raspi</a>, <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/dhcp">dhcp</a>, <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/raspberry%20pi">raspberry pi</a>, <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/static%20ip">static ip</a></p>
+    </p>
+
+        </div>
+
+        <p class="post-footer">
+
+      <em>posted by umesh kumar Kumawat @ <a href="http://linuxhelperssingatiya.blogspot.in/2017/10/how-to-connect-two-linux-machine.html" title="permanent link">October 09, 2017</a></em> &nbsp;
+      
+         <a class="comment-link" href="http://linuxhelperssingatiya.blogspot.in/2017/10/how-to-connect-two-linux-machine.html#comment-form"location.href=http://linuxhelperssingatiya.blogspot.com/2017/10/how-to-connect-two-linux-machine.html#comment-form;><span style="text-transform:lowercase">1 Comments</span></a>
+      
+ <span class="item-control blog-admin pid-1047737047"><a style="border:none;" href="https://www.blogger.com/post-edit.g?blogID=7667983272254077387&postID=1100230516598808190&from=pencil" title="Edit Post"><img class="icon-action" alt="" src="https://img2.blogblog.com/img/icon18_edit_allbkg.gif" height="18" width="18"></a></span>
+    </p>
+
+    </div>
+
+  <!-- End .post -->
+
+        <!-- Begin #comments -->
+ 
+
+  <!-- End #comments -->
+
+
+
+    
+
+         <!-- Begin .post -->
+
+  <div class="post"><a name="1031657198278348477"></a>
+
+     
+	 
+    <h3 class="post-title">
+	 Top 5 project ideas linux python 2017
+    </h3>
+	 
+    
+
+         <div class="post-body">
+
+          <p>
+      <div style="clear:both;"></div><p dir="ltr">Here you can get some interesting ideas to convert into projects.</p>
+<p dir="ltr"><b>1. Parser software:-</b><br>
+It is type of software that&#160; allows different kind of formatted data to be converted in one specified format to make consolidate data reports.</p>
+<p dir="ltr">Today is decade of digital data .<br>
+So every organization have some sort of big data somewhere data in terms of reports, documents, papers etc.</p>
+<p dir="ltr">But for analysis of data Google sheet, mysql database and excel sheet are preferred everywhere.</p>
+<p dir="ltr">So each type of available data needs to be converted in targeted format.</p>
+<p dir="ltr">You can be expert of any programming language I.e. python ,shell scripting, go, R etc.</p>
+<p dir="ltr">Python offers rich community to help you in any problematic situation.</p>
+<p dir="ltr"><b>2. </b><b>Google</b><b> </b><b>scrapping</b><b>:-</b> <br>
+It is process to get some missing data from online sources with help of some basic identity data.<br>
+I.e. for example we have name and address of 7 lack students , using online resources you need to get the current profile of those students like where they are working currently and contact details.<br>
+It might be a illegal activity as well so be aware of terms of Google in this project.</p>
+<p dir="ltr"><b>3. </b><b>AdSense</b>:-<br>
+It is scheme of Google which rewards you&#160;&#160; for your page views and your&#160; content popularity by placing ads fitted in your websites and your channels on YouTube.<br>
+Make sure your&#160; content is not duplicate of other's&#160; other wise you might got blocked for ad sensing.</p>
+<p dir="ltr">4.<b>workflow</b><b> </b><b>software</b><b>:</b>-<br>
+Today each organisation wants to automate all processes that's why you need to have some application that process on all previous debugged data to make a workflow which avoids all unnecessary time to learn in interns and fresher's .<br>
+Using workflows they should get breaked down tasks in such a manner that software itself tells and verify the action of person for particular task.</p>
+<p dir="ltr">5. <b>Antivirus</b><b> </b><b>software</b>:-<br>
+This should be so intelligent that auto detect all type of malware's and fix the suspicious programs and should disable viruses functionality .if it is not able to fix it it should automatic search online details of that type of virus and take necessary actions.</p>
+<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/google%20scrapping">google scrapping</a>, <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/linux%20projects">linux projects</a>, <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/python">python</a>, <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/top%205%20project%20ideas">top 5 project ideas</a></p>
+    </p>
+
+        </div>
+
+        <p class="post-footer">
+
+      <em>posted by umesh kumar Kumawat @ <a href="http://linuxhelperssingatiya.blogspot.in/2017/10/top-5-project-ideas-linux-python.html" title="permanent link">October 09, 2017</a></em> &nbsp;
+      
+         <a class="comment-link" href="http://linuxhelperssingatiya.blogspot.in/2017/10/top-5-project-ideas-linux-python.html#comment-form"location.href=http://linuxhelperssingatiya.blogspot.com/2017/10/top-5-project-ideas-linux-python.html#comment-form;><span style="text-transform:lowercase">0 Comments</span></a>
+      
+ <span class="item-control blog-admin pid-1047737047"><a style="border:none;" href="https://www.blogger.com/post-edit.g?blogID=7667983272254077387&postID=1031657198278348477&from=pencil" title="Edit Post"><img class="icon-action" alt="" src="https://img2.blogblog.com/img/icon18_edit_allbkg.gif" height="18" width="18"></a></span>
+    </p>
+
+    </div>
+
+  <!-- End .post -->
+
+        <!-- Begin #comments -->
+ 
+
+  <!-- End #comments -->
+
+
+
+    
+  <h2 class="date-header">Saturday, 7 October 2017</h2>
   
+
+         <!-- Begin .post -->
+
+  <div class="post"><a name="2651884793910144443"></a>
+
+     
+	 
+    <h3 class="post-title">
+	 How to know which proxies are communicating to my server
+    </h3>
+	 
+    
+
+         <div class="post-body">
+
+          <p>
+      <div style="clear:both;"></div><div dir="ltr" style="text-align: left;" trbidi="on">
+<div dir="ltr">
+To know what are the proxies which are either listening my server or syncing any data. <br />
+Those can be easily find out by below command.</div>
+<div dir="ltr">
+<u>netstat</u></div>
+<br />
+Examples of netstat commands -<br />
+<br />
+<h2 id="examples">
+netstat examples</h2>
+<div class="tcy tab" style="text-align: left;">
+<span style="background-color: black;"><span style="color: white;">netstat</span></span></div>
+<div class="tab">
+Displays generic statistics about the network activity of the local system.</div>
+<div class="tcy tab">
+<span style="background-color: black;"><span style="color: white;">netstat -an</span></span></div>
+<span style="background-color: black;"><span style="color: white;">
+</span></span><div class="tab">
+Shows information about all active connections to the 
+server, including the source and destination IP addresses and ports, if 
+you have proper permissions.</div>
+<div class="tcy tab" style="text-align: left;">
+<span style="background-color: black;"><span style="color: white;">netstat -rn</span></span></div>
+<div class="tab">
+Displays the routing table for all IP addresses bound to the server.</div>
+<div class="tcy tab" style="text-align: left;">
+<span style="background-color: black;"><span style="color: white;">netstat -an |grep :80 | wc -l</span></span></div>
+<div class="tab">
+Collects statistics about the amount of active connections on port 80, and pipes this data to the <b>wc</b> command, which displays the number of connections by counting the lines of the original <b>netstat</b> output.</div>
+<pre class="tcy tab">netstat -natp</pre>
+<div class="tab">
+Display statistics about active Internet connections.</div>
+<h2 id="related">
+Related commands</h2>
+<div class="tab">
+<b>ac</b><a href="https://www.blogger.com/null"> — Print statistics about the amount of time users have been connected.</a>
+<b>arp</b><a href="https://www.blogger.com/null"> — Manipulate the system ARP cache.</a>
+<b>ifconfig</b><a href="https://www.blogger.com/null"> — View or modify the configuration of network interfaces.</a>
+<b>ip</b><a href="https://www.blogger.com/null"> — Display and manipulate information about routing, devices, policy routing and tunnels.</a>
+<b>route</b> — Display and manipulate the IP routing table.<br />
+<b>rpcinfo</b><a href="https://www.blogger.com/null"> — Report information about Remote Procedure Calls.</a></div>
+<br />
+<br />
+<br />
+<br />
+manual of netstat is as follows-<br />
+<h2>
+Name</h2>
+netstat - Print network connections, routing tables, interface statistics, masquerade connections, and
+multicast memberships
+<h2>
+Synopsis</h2>
+<b>netstat</b> [<i>address_family_options</i>] [<b>--tcp</b>|<b>-t</b>] [<b>--udp</b>|<b>-u</b>] [<b>--raw</b>|<b>-w</b>] [<b>--listening</b>|<b>-l</b>]
+[<b>--all</b>|<b>-a</b>] [<b>--numeric</b>|<b>-n</b>] [<b>--numeric-hosts</b>]<b>[</b>--numeric-ports<b>]</b>[<b>--numeric-ports</b>]
+[<b>--symbolic</b>|<b>-N</b>] [<b>--extend</b>|<b>-e</b>[<b>--extend</b>|<b>-e]</b>] [<b>--timers</b>|<b>-o</b>] [<b>--program</b>|<b>-p</b>]
+[<b>--verbose</b>|<b>-v</b>] [<b>--continuous</b>|<b>-c]</b> [delay]
+<b>netstat</b> {<b>--route</b>|<b>-r</b>} [<i>address_family_options</i>] [<b>--extend</b>|<b>-e</b>[<b>--extend</b>|<b>-e]</b>]
+[<b>--verbose</b>|<b>-v</b>] [<b>--numeric</b>|<b>-n</b>] [<b>--numeric-hosts</b>]<b>[</b>--numeric-ports<b>]</b>[<b>--numeric-ports</b>]
+[<b>--continuous</b>|<b>-c]</b> [delay]
+<br />
+<b>netstat</b> {<b>--interfaces</b>|<b>-I</b>|<b>-i</b>} [<i>iface</i>] [<b>--all</b>|<b>-a</b>] [<b>--extend</b>|<b>-e</b>] [<b>--verbose</b>|<b>-v</b>]
+[<b>--program</b>|<b>-p</b>] [<b>--numeric</b>|<b>-n</b>] [<b>--numeric-hosts</b>]<b>[</b>--numeric-ports<b>]</b>[<b>--numeric-ports</b>]
+[<b>--continuous</b>|<b>-c]</b> [delay]
+<br />
+<b>netstat</b> {<b>--groups</b>|<b>-g</b>} [<b>--numeric</b>|<b>-n</b>] [<b>--numeric-hosts</b>]<b>[</b>--numeric-ports<b>]</b>[<b>--numeric-ports</b>]
+[<b>--continuous</b>|<b>-c]</b> [delay]
+<br />
+<b>netstat</b> {<b>--masquerade</b>|<b>-M</b>} [<b>--extend</b>|<b>-e</b>] [<b>--numeric</b>|<b>-n</b>]
+[<b>--numeric-hosts</b>]<b>[</b>--numeric-ports<b>]</b>[<b>--numeric-ports</b>] [<b>--continuous</b>|<b>-c]</b> [delay]
+<br />
+<b>netstat</b> {<b>--statistics</b>|<b>-s</b>} [<b>--tcp</b>|<b>-t</b>] [<b>--udp</b>|<b>-u</b>] [<b>--raw</b>|<b>-w</b>] [delay]
+<br />
+<b>netstat</b> {<b>--version</b>|<b>-V</b>}
+<br />
+<b>netstat</b> {<b>--help</b>|<b>-h</b>}
+<br />
+<i>address_family_options</i>:
+<br />
+[<b>--protocol=</b>{<b>inet</b>,<b>unix</b>,<b>ipx</b>,<b>ax25</b>,<b>netrom</b>,<b>ddp</b>}[,<b>...]</b>] [<b>--unix</b>|<b>-x</b>]
+[<b>--inet</b>|<b>--ip</b>] [<b>--ax25</b>] [<b>--ipx</b>] [<b>--netrom</b>] [<b>--ddp</b>]
+<br />
+<h2>
+Note</h2>
+This program is obsolete. Replacement for <b>netstat</b> is <b>ss</b>. Replacement for <b>netstat -r</b> is <b>ip route</b>. Replacement for <b>netstat
+-i</b> is <b>ip -s link</b>. Replacement for <b>netstat -g</b> is <b>ip maddr</b>.
+<br />
+<h2>
+Description</h2>
+<b>Netstat</b> prints information about the Linux networking subsystem. The type of information
+printed is controlled by the first argument, as follows:
+<h3>
+(none)</h3>
+By default, netstat displays a list of open sockets. If you don't specify any address families, then
+the active sockets of all configured address families will be printed.
+<h3>
+--route , -r</h3>
+Display the kernel routing tables.
+<h3>
+--groups , -g</h3>
+Display multicast group membership information for IPv4 and IPv6.
+<h3>
+--interfaces=<i>iface</i> , <b>-I=<i>iface</i></b> , <b>-i</b></h3>
+Display a table of all network interfaces,
+or the specified <i>iface</i>.
+<h3>
+--masquerade , -M</h3>
+Display a list of masqueraded connections.
+<h3>
+--statistics , -s</h3>
+Display summary statistics for each protocol.
+<h2>
+Options</h2>
+<h3>
+--verbose , -v</h3>
+Tell the user what is going on by being verbose. Especially print some useful information
+about unconfigured address families.
+<h3>
+--numeric , -n</h3>
+Show numerical addresses instead of trying to determine symbolic host, port or user
+names.
+<h3>
+--numeric-hosts</h3>
+shows numerical host addresses but does not affect the resolution of port or user names.
+<h3>
+--numeric-ports</h3>
+shows numerical port numbers but does not affect the resolution of host or user names.
+<h3>
+--numeric-users</h3>
+shows numerical user IDs but does not affect the resolution of host or port names.
+<h3>
+--protocol=<i>family</i> , <b>-A</b></h3>
+Specifies the address families (perhaps better described as low
+level protocols) for which connections are to be shown. <i>family</i> is a comma (',') separated list of address family keywords like <b>inet</b>, <b>unix</b>,
+<b>ipx</b>, <b>ax25</b>, <b>netrom</b>, and <b>ddp</b>. This has the same effect as using the <b>--inet</b>, <b>--unix</b> (<b>-x</b>), <b>--ipx</b>,
+<b>--ax25</b>, <b>--netrom</b>, and <b>--ddp</b> options.
+The address family <b>inet</b> includes raw, udp and tcp protocol sockets.
+<br />
+<h3>
+-c, --continuous</h3>
+This will cause <b>netstat</b> to print the selected information every second
+continuously.
+<h3>
+-e, --extend</h3>
+Display additional information. Use this option twice for maximum detail.
+<h3>
+-o, --timers</h3>
+Include information related to networking timers.
+<h3>
+-p, --program</h3>
+Show the PID and name of the program to which each socket belongs.
+<h3>
+-l, --listening</h3>
+Show only listening sockets. (These are omitted by default.)
+<h3>
+-a, --all</h3>
+Show both listening and non-listening (for TCP this means established connections) sockets.
+With the <b>--interfaces</b> option, show interfaces that are not marked
+<h3>
+-f</h3>
+Print routing information from the FIB. (This is the default.)
+<h3>
+-c</h3>
+Print routing information from the route cache.
+<h3>
+-Z --context</h3>
+If SELinux enabled print SELinux context.
+<h3>
+-T --notrim</h3>
+Stop trimming long addresses.
+<h3>
+delay</h3>
+Netstat will cycle printing through statistics every <b>delay</b> seconds. <i>UP</i>.
+<h2>
+Output</h2>
+<h3>
+Active Internet connections (TCP, UDP, raw)</h3>
+<h3>
+Proto</h3>
+The protocol (tcp, udp, raw) used by the socket.
+<h3>
+Recv-Q</h3>
+The count of bytes not copied by the user program connected to this socket.
+<h3>
+Send-Q</h3>
+The count of bytes not acknowledged by the remote host.
+<h3>
+Local Address</h3>
+Address and port number of the local end of the socket. Unless the <b>--numeric</b>
+(<b>-n</b>) option is specified, the socket address is resolved to its 
+canonical host name (FQDN), and the port number is translated into the 
+corresponding
+service name.
+<h3>
+Foreign Address</h3>
+Address and port number of the remote end of the socket. Analogous to "Local Address."
+<h3>
+State</h3>
+The state of the socket. Since there are no states in raw mode and usually no states used in UDP,
+this column may be left blank. Normally this can be one of several values:
+<dl compact="compact">
+<dt>ESTABLISHED
+</dt>
+<dd>The socket has an established connection.
+</dd>
+<dt>SYN_SENT
+</dt>
+<dd>The socket is actively attempting to establish a connection.
+</dd>
+<dt>SYN_RECV
+</dt>
+<dd>A connection request has been received from the network.
+</dd>
+<dt>FIN_WAIT1
+</dt>
+<dd>The socket is closed, and the connection is shutting down.
+</dd>
+<dt>FIN_WAIT2
+</dt>
+<dd>Connection is closed, and the socket is waiting for a shutdown from the remote end.
+</dd>
+<dt>TIME_WAIT
+</dt>
+<dd>The socket is waiting after close to handle packets still in the network.
+</dd>
+<dt>CLOSED
+</dt>
+<dd>The socket is not being used.
+</dd>
+<dt>CLOSE_WAIT
+</dt>
+<dd>The remote end has shut down, waiting for the socket to close.
+</dd>
+<dt>LAST_ACK
+</dt>
+<dd>The remote end has shut down, and the socket is closed. Waiting for acknowledgement.
+</dd>
+<dt>LISTEN
+</dt>
+<dd>The socket is listening for incoming connections. Such sockets are not included in the output unless you specify the <b>--listening</b> (<b>-l</b>) or
+<b>--all</b> (<b>-a</b>) option.
+</dd>
+<dt>CLOSING
+</dt>
+<dd>Both sockets are shut down but we still don't have all our data sent.
+</dd>
+<dt>UNKNOWN
+</dt>
+<dd>The state of the socket is unknown.</dd></dl>
+<h3>
+User</h3>
+The username or the user id (UID) of the owner of the socket.
+<h3>
+PID/Program name</h3>
+Slash-separated pair of the process id (PID) and process name of the process that owns
+the socket. <b>--program</b> causes this column to be included. You will also need <i>superuser</i> privileges to see this information on sockets you don't
+own. This identification information is not yet available for IPX sockets.
+<h3>
+Timer</h3>
+(this needs to be written)
+<h3>
+Active UNIX domain Sockets</h3>
+<h3>
+Proto</h3>
+The protocol (usually unix) used by the socket.
+<h3>
+RefCnt</h3>
+The reference count (i.e. attached processes via this socket).
+<h3>
+Flags</h3>
+The flags displayed is SO_ACCEPTON (displayed as <b>ACC</b>), SO_WAITDATA (<b>W</b>) or SO_NOSPACE
+(<b>N</b>). SO_ACCECPTON is used on unconnected sockets if their 
+corresponding processes are waiting for a connect request. The other 
+flags are not of normal
+interest.
+<h3>
+Type</h3>
+There are several types of socket access:
+<dl compact="compact">
+<dt>SOCK_DGRAM
+</dt>
+<dd>The socket is used in Datagram (connectionless) mode.
+</dd>
+<dt>SOCK_STREAM
+</dt>
+<dd>This is a stream (connection) socket.
+</dd>
+<dt>SOCK_RAW
+</dt>
+<dd>The socket is used as a raw socket.
+</dd>
+<dt>SOCK_RDM
+</dt>
+<dd>This one serves reliably-delivered messages.
+</dd>
+<dt>SOCK_SEQPACKET
+</dt>
+<dd>This is a sequential packet socket.
+</dd>
+<dt>SOCK_PACKET
+</dt>
+<dd>Raw interface access socket.
+</dd>
+<dt>UNKNOWN
+</dt>
+<dd>Who ever knows what the future will bring us - just fill in here :-)</dd></dl>
+<h3>
+State</h3>
+This field will contain one of the following Keywords:
+<dl compact="compact">
+<dt><i>FREE</i>
+</dt>
+<dd>The socket is not allocated
+</dd>
+<dt><i>LISTENING</i>
+</dt>
+<dd>The socket is listening for a connection request. Such sockets are only included in the output if you specify the <b>--listening</b> (<b>-l</b>) or
+<b>--all</b> (<b>-a</b>) option.
+</dd>
+<dt><i>CONNECTING</i>
+</dt>
+<dd>The socket is about to establish a connection.
+</dd>
+<dt><i>CONNECTED</i>
+</dt>
+<dd>The socket is connected.
+</dd>
+<dt><i>DISCONNECTING</i>
+</dt>
+<dd>The socket is disconnecting.
+</dd>
+<dt><i>(empty)</i>
+</dt>
+<dd>The socket is not connected to another one.
+</dd>
+<dt><i>UNKNOWN</i>
+</dt>
+<dd>This state should never happen.</dd></dl>
+<h3>
+PID/Program name</h3>
+Process ID (PID) and process name of the process that has the socket open. More info
+available in <b>Active Internet connections</b> section written above.
+<h3>
+Path</h3>
+This is the path name as which the corresponding processes attached to the socket.
+<h3>
+Active IPX sockets</h3>
+(this needs to be done by somebody who knows it)
+<h3>
+Active NET/ROM sockets</h3>
+(this needs to be done by somebody who knows it)
+<h3>
+Active AX.25 sockets</h3>
+(this needs to be done by somebody who knows it)
+<h2>
+Notes</h2>
+Starting with Linux release 2.2 <b>netstat -i</b> does not show interface statistics for alias
+interfaces. To get per alias interface counters you need to setup explicit rules using the <i><b><b>ipchains</b>(8)</b></i> command.
+<h2>
+Files</h2>
+<i>/etc/services</i> -- The services translation
+<br />
+file
+<br />
+<i>/proc</i> -- Mount point for the proc filesystem, which gives access to kernel status information via the following files.
+<br />
+<i>/proc/net/dev</i> -- device
+<br />
+information
+<br />
+<i>/proc/net/raw</i> -- raw socket information
+<br />
+<i>/proc/net/tcp</i> -- TCP
+<br />
+socket information
+<br />
+<i>/proc/net/udp</i> -- UDP socket information
+<br />
+<i>/proc/net/igmp</i> -- IGMP multicast information
+<br />
+<i>/proc/net/unix</i> -- Unix domain socket information
+<br />
+<i>/proc/net/ipx</i> -- IPX socket information
+<br />
+<i>/proc/net/ax25</i> -- AX25 socket information
+<br />
+<i>/proc/net/appletalk</i> -- DDP (appletalk) socket information
+<br />
+<i>/proc/net/nr</i> -- NET/ROM socket information
+<br />
+<i>/proc/net/route</i> -- IP routing information
+<br />
+<i>/proc/net/ax25_route</i> -- AX25 routing information
+<br />
+<i>/proc/net/ipx_route</i> -- IPX routing information
+<br />
+<i>/proc/net/nr_nodes</i> -- NET/ROM nodelist
+<br />
+<i>/proc/net/nr_neigh</i> -- NET/ROM neighbours
+<br />
+<i>/proc/net/ip_masquerade</i> -- masqueraded connections
+<br />
+<i>/proc/net/snmp</i> -- statistics
+<br />
+<h2>
+See Also</h2>
+<i><b><a href="https://linux.die.net/man/8/ss">ss</a></b>(8)</i>,<i><b><b><a href="https://linux.die.net/man/8/ip">ip</a></b>(8)</b></i>
+<h2>
+Bugs</h2>
+Occasionally strange information may appear if a socket changes as it is viewed. This is unlikely
+to occur.
+<h2>
+Authors</h2>
+The netstat user interface was written by Fred Baumgarten
+&lt;dc6iq@insu1.etec.uni-karlsruhe.de&gt; the man page basically by Matt Welsh &lt;mdw@tc.cornell.edu&gt;. It was updated by Alan Cox
+&lt;Alan.Cox@linux.org&gt; but could do with a bit more work. It was updated again by Tuan Hoang &lt;tqhoang@bigfoot.com&gt;.<br />
+The man page and the command included in the net-tools package is totally rewritten by Bernd Eckenfels &lt;ecki@linux.de&gt;.
+
+
+<h2>
+Referenced By</h2>
+<b><a href="https://www.blogger.com/null" rel="nofollow">hb_report</a></b>(8),
+<b><a href="https://www.blogger.com/null" rel="nofollow">icmp</a></b>(7),
+<b><a href="https://www.blogger.com/null" rel="nofollow">ifinfo</a></b>(8),
+<b><a href="https://www.blogger.com/null" rel="nofollow">inndstart</a></b>(8),
+<b><a href="https://www.blogger.com/null" rel="nofollow">ipsec_look</a></b>(8),
+<b><a href="https://www.blogger.com/null" rel="nofollow">netcap</a></b>(8),
+<b><a href="https://www.blogger.com/null" rel="nofollow">nethogs</a></b>(8),
+<b><a href="https://www.blogger.com/null" rel="nofollow">netmask</a></b>(1),
+<b><a href="https://www.blogger.com/null" rel="nofollow">networks</a></b>(5),
+<b><a href="https://www.blogger.com/null" rel="nofollow">proc</a></b>(5),
+<b><a href="https://www.blogger.com/null" rel="nofollow">route</a></b>(8),
+<b><a href="https://www.blogger.com/null" rel="nofollow">socklist</a></b>(8)
+<div dir="ltr">
+<br /></div>
+</div>
+<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/connected%20systems%20to%20server">connected systems to server</a>, <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/listener">listener</a>, <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/netstat">netstat</a>, <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/proxies">proxies</a>, <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/syncing">syncing</a></p>
+    </p>
+
+        </div>
+
+        <p class="post-footer">
+
+      <em>posted by umesh kumar Kumawat @ <a href="http://linuxhelperssingatiya.blogspot.in/2017/10/how-to-know-which-proxies-are.html" title="permanent link">October 07, 2017</a></em> &nbsp;
+      
+         <a class="comment-link" href="http://linuxhelperssingatiya.blogspot.in/2017/10/how-to-know-which-proxies-are.html#comment-form"location.href=http://linuxhelperssingatiya.blogspot.com/2017/10/how-to-know-which-proxies-are.html#comment-form;><span style="text-transform:lowercase">0 Comments</span></a>
+      
+ <span class="item-control blog-admin pid-1047737047"><a style="border:none;" href="https://www.blogger.com/post-edit.g?blogID=7667983272254077387&postID=2651884793910144443&from=pencil" title="Edit Post"><img class="icon-action" alt="" src="https://img2.blogblog.com/img/icon18_edit_allbkg.gif" height="18" width="18"></a></span>
+    </p>
+
+    </div>
+
+  <!-- End .post -->
+
+        <!-- Begin #comments -->
+ 
+
+  <!-- End #comments -->
+
+
+
+    
+  <h2 class="date-header">Sunday, 24 September 2017</h2>
+  
+
+         <!-- Begin .post -->
+
+  <div class="post"><a name="3550848730618621360"></a>
+
+     
+	 
+    <h3 class="post-title">
+	 External RTC fix steps in Raspi jessie
+    </h3>
+	 
+    
+
+         <div class="post-body">
+
+          <p>
+      <div style="clear:both;"></div><head>
+External RTC fix steps in Raspi jessie
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8334389478533610",
+    enable_page_level_ads: true
+  });
+</script>
+</head>
+<div dir="ltr" style="text-align: left;" trbidi="on">
+<br />
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">For Raspi jessie the RTC interface process is not same as for Raspi wheezy.It need some more efforts.</span><span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;"><br class="kix-line-break" /></span></div>
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">First of all execute below copmmand to install i2c-tools</span></div>
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">
+<span style="color: white;"><span style="background-color: black;"><span style="font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">sudo apt-get install i2c-tools</span></span></span></div>
+<br />
+<br />
+then to check if rtc module detected or not<br />
+<br />
+<pre><span style="color: white;"><span style="background-color: black;"><code>sudo i2cdetect -y 1</code></span></span></pre>
+<pre><span style="background-color: white;"><code>&nbsp;</code></span></pre>
+<pre><span style="background-color: white;"><code>
+</code></span></pre>
+<pre>You should see output similar to&nbsp;</pre>
+<pre>&nbsp;</pre>
+<div class="codebox">
+<pre><code>     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- 1c -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- UU -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- -- </code></pre>
+</div>
+Note that I have UU in position 68, this is my RTC device and it is in 
+use. You may see 68 instead. All being well you have something in this 
+position.<br />
+<pre><span style="background-color: white;"><code></code></span></pre>
+Edit config.txt to add the following: dtoverlay=i2c-rtc,ds1307<br />
+<div class="code">
+<br /></div>
+<div class="code">
+<span style="color: white;"><span style="background-color: black;">sudo nano /boot/config.txt</span></span></div>
+<span style="color: white;"><span style="background-color: black;">
+
+</span></span>At the end of the file add<br />
+<div class="code">
+dtoverlay=i2c-rtc,ds1307</div>
+<br />
+<br />
+<br />
+Add the module to /etc/modules:<br />
+<div class="code">
+<span style="color: white;"><span style="background-color: black;">sudo nano /etc/modules</span></span></div>
+Add at the end of the file<br />
+<div class="code">
+i2c-bcm2708<br />
+i2c-dev<br />
+rtc-ds1307</div>
+Save your changes<br />
+<br />
+<br />
+<br />
+<br />
+Next edit edit /lib/udev/hwclock-set it is very important step otherwise raspi hwclock time will be synced from system time which will be wrong time hence again system time will be affected.<br />
+<div class="code">
+<span style="background-color: black;"><span style="color: white;">sudo nano /lib/udev/hwclock-set</span></span></div>
+Commend out the following lines with #<br />
+<div class="code">
+#if [ -e /run/systemd/system ] ; then<br />
+#exit 0<br />
+#fi</div>
+<br />
+<br />
+ensure /etc/modprobe.d/raspi-blacklist.conf has nothing in it<br />
+<br />
+<pre><code>Ensure NTP on by executing <span style="background-color: black;"><span style="color: white;">timedatectl set-ntp true</span></span>&nbsp;</code></pre>
+<pre><code>
+</code></pre>
+<pre><code>
+</code></pre>
+<pre><code>you can check all time related stuff at one place by executing. </code></pre>
+<pre><span style="color: white;"><span style="background-color: black;"><code>timedatectl status</code></span></span></pre>
+<pre><code>&nbsp;</code></pre>
+Reboot the Raspberry Pi.<br />
+<div class="code">
+<span style="color: white;"><span style="background-color: black;">sudo reboot</span></span></div>
+<pre><span style="background-color: white;"><code></code></span></pre>
+<pre><span style="background-color: white;"><code></code></span></pre>
+<pre>Sources-</pre>
+<pre><a href="https://raspberrypi.stackexchange.com/questions/42347/real-time-clock-puzzle-with-new-rasbian-jessie">https://raspberrypi.stackexchange.com/questions/42347/real-time-clock-puzzle-with-new-rasbian-jessie </a></pre>
+<pre><a href="https://www.abelectronics.co.uk/kb/article/1/i2c--smbus-and-raspbian-linux">https://www.abelectronics.co.uk/kb/article/1/i2c--smbus-and-raspbian-linux</a></pre>
+<pre><a href="https://github.com/weewx/weewx/wiki/pi-RTC-with-raspbian-jessie">https://github.com/weewx/weewx/wiki/pi-RTC-with-raspbian-jessie</a></pre>
+<pre><a href="https://www.raspberrypi.org/forums/viewtopic.php?f=66&amp;t=125003">https://www.raspberrypi.org/forums/viewtopic.php?f=66&amp;t=125003</a></pre>
+<pre><span style="background-color: white;"><code></code></span></pre>
+</div>
+<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/drift%20on%20boot">drift on boot</a>, <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/hwclock">hwclock</a>, <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/raspberry%20pi">raspberry pi</a>, <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/raspi">raspi</a>, <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/RTC">RTC</a></p>
+    </p>
+
+        </div>
+
+        <p class="post-footer">
+
+      <em>posted by umesh kumar Kumawat @ <a href="http://linuxhelperssingatiya.blogspot.in/2017/09/blog-post.html" title="permanent link">September 24, 2017</a></em> &nbsp;
+      
+         <a class="comment-link" href="http://linuxhelperssingatiya.blogspot.in/2017/09/blog-post.html#comment-form"location.href=http://linuxhelperssingatiya.blogspot.com/2017/09/blog-post.html#comment-form;><span style="text-transform:lowercase">0 Comments</span></a>
+      
+ <span class="item-control blog-admin pid-1047737047"><a style="border:none;" href="https://www.blogger.com/post-edit.g?blogID=7667983272254077387&postID=3550848730618621360&from=pencil" title="Edit Post"><img class="icon-action" alt="" src="https://img2.blogblog.com/img/icon18_edit_allbkg.gif" height="18" width="18"></a></span>
+    </p>
+
+    </div>
+
+  <!-- End .post -->
+
+        <!-- Begin #comments -->
+ 
+
+  <!-- End #comments -->
+
+
+
+    
+  <h2 class="date-header">Saturday, 23 September 2017</h2>
+  
+
+         <!-- Begin .post -->
+
+  <div class="post"><a name="2220231886255605486"></a>
+
+     
+	 
+    <h3 class="post-title">
+	 How to Improve your debug skills
+    </h3>
+	 
+    
+
+         <div class="post-body">
+
+          <p>
+      <div style="clear:both;"></div><div dir="ltr" style="text-align: left;" trbidi="on">
+Usually we listen from our colleagues and friends that your debug skills are not good as his.<br>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://s3.amazonaws.com/lowres.cartoonstock.com/computers-bug-debug-debugging_skills-it_support-virus-tcrn102_low.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" data-original-height="493" data-original-width="400" height="320" src="https://s3.amazonaws.com/lowres.cartoonstock.com/computers-bug-debug-debugging_skills-it_support-virus-tcrn102_low.jpg" width="259"></a></div>
+Today's Post is all about Debug skills improvements.<br>
+<br>
+Debugging doesn't mean to only code debugging.<br>
+<br>
+Debugging can be classified into various levels-<br>
+<ol style="text-align: center;"><ol><ol><ol>
+</ol>
+</ol>
+</ol>
+</ol>
+<blockquote class="tr_bq">
+<ul style="text-align: center;">
+<li>Code debugging</li>
+<li>Hardware debugging</li>
+<li>O&amp;M debugging&nbsp;</li></ul></blockquote>
+<br>
+<br>
+<br>
+<div style="text-align: left;">
+1. <b>Code debugging</b>- It is most easy way of debugging. you have some debugger in IDE platform .</div>
+<div style="text-align: left;">
+for example if you want to debug python code, just put print statements of variable values with each logic and checks. you will get the issue in minutes only.apart from this you will found easily some online debugger tools where you can set some breakpoints. and check what's issue with your code.</div>
+You can refer this book to improve your code debugging skills<br>
+<br>
+<a href="https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X/ref=pd_lpo_sbs_14_t_0/132-7848741-1865516?_encoding=UTF8&amp;psc=1&amp;refRID=HAFAT5DF6507B27S0Z10">https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X/ref=pd_lpo_sbs_14_t_0/132-7848741-1865516?_encoding=UTF8&amp;psc=1&amp;refRID=HAFAT5DF6507B27S0Z10</a><br>
+<br>
+2.<b> Hardware Debugging- </b>In this case you will need to put more efforts.<br>
+you will need some extra measuring tools, meters,some standard copies and good practices well. You have seen in your daily life that an engineer may take more time to get RCA of a failure in comparison to a mechanic. I tried same with myself. i am electrical engineer . i spend 3-4 hours to know why my TV is not working.but when same TV i took to mechanic within 30 minutes he repaired it after finding issue. that came after experience only.</div><div dir="ltr" style="text-align: left;" trbidi="on"><br></div><div dir="ltr" style="text-align: left;" trbidi="on">Simulation of hardware-</div><div dir="ltr" style="text-align: left;" trbidi="on">It is very important key for a good product.</div><div dir="ltr" style="text-align: left;" trbidi="on">Simulate the hardware first before putting it in manufacturing.</div><div dir="ltr" style="text-align: left;" trbidi="on">You can use MATLAB, atlantis , pspice etc for simulation.<br>
+<br>
+3.<b> O&amp;M debugging-</b> now when s/w and h/w are integrated and we face some issue there would be a great question how to debug problem of s/w or h/w.<br>
+<br>
+<br>so here are some tips for this-<br>
+if you have good sample size then just follow below tips to identify domain-<br>
+<br>
+S/W domain problems-<br>
+<ul style="text-align: left;">
+<li>Usually occurs in all samples&nbsp;</li>
+<li>It would be relate to time related issues.</li>
+<li>It would be related to some corruption of data due to overflow of variables.</li>
+</ul>
+H/W domain problems-<br>
+<ul style="text-align: left;">
+<li>It would be related to some voltage level change.</li>
+<li>It would be related to some heating issue</li>
+<li>It would be related to some impedance vary issue.&nbsp; </li>
+</ul>
+</div>
+<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/debug%20skills">debug skills</a></p>
+    </p>
+
+        </div>
+
+        <p class="post-footer">
+
+      <em>posted by umesh kumar Kumawat @ <a href="http://linuxhelperssingatiya.blogspot.in/2017/09/how-to-improve-your-debug-skills.html" title="permanent link">September 23, 2017</a></em> &nbsp;
+      
+         <a class="comment-link" href="http://linuxhelperssingatiya.blogspot.in/2017/09/how-to-improve-your-debug-skills.html#comment-form"location.href=http://linuxhelperssingatiya.blogspot.com/2017/09/how-to-improve-your-debug-skills.html#comment-form;><span style="text-transform:lowercase">0 Comments</span></a>
+      
+ <span class="item-control blog-admin pid-1047737047"><a style="border:none;" href="https://www.blogger.com/post-edit.g?blogID=7667983272254077387&postID=2220231886255605486&from=pencil" title="Edit Post"><img class="icon-action" alt="" src="https://img2.blogblog.com/img/icon18_edit_allbkg.gif" height="18" width="18"></a></span>
+    </p>
+
+    </div>
+
+  <!-- End .post -->
+
+        <!-- Begin #comments -->
+ 
+
+  <!-- End #comments -->
+
+
+
+    
+  <h2 class="date-header">Monday, 18 September 2017</h2>
+  
+
+         <!-- Begin .post -->
+
+  <div class="post"><a name="1897006954378276450"></a>
+
+     
+	 
+    <h3 class="post-title">
+	 Common used linux commands
+    </h3>
+	 
+    
+
+         <div class="post-body">
+
+          <p>
+      <div style="clear:both;"></div><div dir="ltr" style="text-align: left;" trbidi="on">
+hey geeks,<br />
+today we will learn some common but magical commands that would avoid your unnecessary hard work <br />
+<br />
+<div dir="ltr" id="docs-internal-guid-83c6a7a0-91c0-107b-4b62-6e26478a364b" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">1. Find and replace with sed in multiple files :</span></div>
+<blockquote class="tr_bq">
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-indent: 36pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">sed -ie 's/word to change /word by change/g'&nbsp; path of file</span></div>
+</blockquote>
+<br />
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">2. Find command syntax:</span></div>
+<blockquote class="tr_bq">
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-indent: 36pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">find ./test -name "abc.txt"</span></div>
+</blockquote>
+<br />
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">3. Find filename with specific string :</span></div>
+<blockquote class="tr_bq">
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-indent: 36pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">find . -type f -name "*John*"</span></div>
+</blockquote>
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">4. To find a specific string in multiple files in a directory</span></div>
+<blockquote class="tr_bq">
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-indent: 36pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">grep -Ril "text-to-find-here" /</span></div>
+</blockquote>
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-indent: 36pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">** Here replace “ / ” with your directory to search in</span></div>
+<br />
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">5. To get the count of occurrence of a keyword in recursive folders and files</span></div>
+<blockquote class="tr_bq">
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">&nbsp;&nbsp;&nbsp; </span><span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">cat */* | &nbsp;grep -a "keyword goes here" | wc -l</span></div>
+</blockquote>
+<br />
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">6. To get to a specific line number( 67 ) and display line numbers in nano :</span></div>
+<blockquote class="tr_bq">
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-indent: 36pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">nano -c +67 abc.py</span></div>
+</blockquote>
+<br />
+<br />
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">7. To setup RTC interface in Raspberry pi 2 jessie</span></div>
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">
+<a href="https://spellfoundry.com/sleepy-pi/setting-up-the-real-time-clock-on-raspbian-jessie/" style="text-decoration: none;"><span style="background-color: transparent; color: #1155cc; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: underline; vertical-align: baseline;">https://spellfoundry.com/sleepy-pi/setting-up-the-real-time-clock-on-raspbian-jessie/</span></a></div>
+<br />
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">8. Write a message to a remote screen</span></div>
+<blockquote class="tr_bq">
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">$write username “Msg goes here”</span></div>
+</blockquote>
+<br />
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">9. Execute a visual command on a remote screen</span></div>
+<blockquote class="tr_bq">
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">$setsid sh -c 'exec sl &lt;&gt; /dev/pts/0 &gt;&amp;0 2&gt;&amp;1'</span></div>
+</blockquote>
+10. To send notify message to remote user display<br />
+<blockquote class="tr_bq">
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">DISPLAY=:0 notify-send message</span></div>
+</blockquote>
+<br />
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">11. Cut to take column of the terminal output :</span></div>
+<blockquote class="tr_bq">
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-indent: 36pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">grep "/bin/bash" /etc/passwd | cut -d':' -f1-4,6,7</span></div>
+</blockquote>
+<br />
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">12. List all users on network</span></div>
+<blockquote class="tr_bq">
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">sudo nbtscan -v -s : 192.168.1.1/24</span></div>
+</blockquote>
+<br />
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">13. Update fake-hwclock in linux</span></div>
+<blockquote class="tr_bq">
+<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">
+<span style="background-color: transparent; color: black; font-family: &quot;arial&quot;; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">sudo fake-hwclock save force</span></div>
+</blockquote>
+</div>
+<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/access%20other%20screen">access other screen</a>, <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/automate">automate</a>, <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/common%20linux%20commands">common linux commands</a>, <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/essential%20commands">essential commands</a>, <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/hacking">hacking</a></p>
+    </p>
+
+        </div>
+
+        <p class="post-footer">
+
+      <em>posted by umesh kumar Kumawat @ <a href="http://linuxhelperssingatiya.blogspot.in/2017/09/common-used-linux-commands.html" title="permanent link">September 18, 2017</a></em> &nbsp;
+      
+         <a class="comment-link" href="http://linuxhelperssingatiya.blogspot.in/2017/09/common-used-linux-commands.html#comment-form"location.href=http://linuxhelperssingatiya.blogspot.com/2017/09/common-used-linux-commands.html#comment-form;><span style="text-transform:lowercase">0 Comments</span></a>
+      
+ <span class="item-control blog-admin pid-1047737047"><a style="border:none;" href="https://www.blogger.com/post-edit.g?blogID=7667983272254077387&postID=1897006954378276450&from=pencil" title="Edit Post"><img class="icon-action" alt="" src="https://img2.blogblog.com/img/icon18_edit_allbkg.gif" height="18" width="18"></a></span>
+    </p>
+
+    </div>
+
+  <!-- End .post -->
+
+        <!-- Begin #comments -->
+ 
+
+  <!-- End #comments -->
+
+
+
+    
+  <h2 class="date-header">Sunday, 17 September 2017</h2>
+  
+
+         <!-- Begin .post -->
+
+  <div class="post"><a name="200471946790686167"></a>
+
+     
+	 
+    <h3 class="post-title">
+	 Google sheet automation  using python API 
+    </h3>
+	 
+    
+
+         <div class="post-body">
+
+          <p>
+      <div style="clear:both;"></div><div dir="ltr" style="text-align: left;" trbidi="on">
+<span style="background-color: white;">This can be very harsh for someone to update some numbers and status on daily basis or hourly basis in google sheet.</span><br />
+<span style="background-color: white;">but if you can automate it. then why worried?? </span><br />
+<span style="background-color: white;"><br /></span>
+<span style="background-color: white;">open the url&nbsp;</span><br />
+<span style="background-color: white;"><br /></span>
+<span style="background-color: white;"><a href="https://developers.google.com/sheets/api/quickstart/python"><cite class="_Rm">https://developers.google.com/sheets/api/quickstart/python</cite></a></span><br />
+<span style="background-color: white;"><br /></span>
+<span style="background-color: white;">and follow instructions.</span><br />
+<span style="background-color: white;"><br /></span>
+<span style="background-color: white;">The sample client_secret.json would look like this&nbsp;</span><br />
+<span style="background-color: white;"><br />
+&nbsp;{<br />&nbsp; "type": "service_account",<br />&nbsp; "project_id": "my-lihasbve-status",<br />&nbsp; "private_key_id": "3cfc0c8hachjbu89a7a8a53b1c54597875f",<br />&nbsp;
+ "private_key": "-----BEGIN PRIVATE 
+KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCjWHiLvMcnKMHC\neSrjfLVcfd2Xhjsdvbhbx
+ 
+/WaJDdQQ2SqQp3u07PIA1Ke+7OM9fgzn0n4d4K1N2sSBk1RaI7ZZ\nQotW/Ep8tXVK6aZSv0nu4XRLZN7ZCnuYtWX0Hl+sraYUEm+FhUTIiEq8HjnHbZcD\nPJHwqkwWt+hR
+ c hacsbhcbhac nx 
+wjoftzkwWKkBu/Bu/r5V3KXK+6bvZTev14UJAvpKbY7V+yAjc01R\nilGyf2/mz9zkGXbi1piHXhP6weVI7Lx6hzWSE3yZOEAsOZtFgfpwHkj6v69KFCoh\nxV27XjI/3jWKqk92vtwwSbhfSDTgfJZqxBYfJg4lUWbuVI2aVF2uVF8CwcG9UuLj\nNyyQ7PmxAgMBAAECggEAA1dHNmj23BE+ZsxQhTD/GuBgapgaS3f04CAX+bfSPPrq\nb3vJ/0rEMlUYXZq5nYHzm3u7sJCHTXVs6K4WsGGWQq8Zsj29ixRaZlRWSwc581+e\nc+r0ZhIDuBIAa0lNvchsv/oGxfKZEfIzj9sUyHTTlQYJTLnUGH3t48b5/MQLkOIrL9fIv\nocVNkbzWmj2DTlf01W10gggVllYO9rri+yQ4CTrfBFeG3qsHu4xW++cUUuRr5C0m\nEFnHtCQce5TeSACnYkKjrwa/twGeu5HQRgo1/l3a9lWSleD2GWIWJhvchacvhvwhfuywgyugywe2mFNuhnMLp+\nQUHGrv53W8ehUNhF3SLXbBSALFLVziPlLbKd3IsSwQKBgQDhkyzx2OCl20u1Qv4b\nqNtnpzl1X7o7nvj+ophhaAAKjjU+VYtUeCQXBzeHl2ozZisQwoEQkSlVXO3xX3hM\ncA8q65ga0YMepsOR6cL8aaPjDjB8ZU1z/WH59/rsGSW9R00oxY5P6C7lkXCH7c3q\n54lqTJ8tJAyraD+LjxKQ5QU0wQKBgQC5YJfuqkEKTWJfUuKd1ZnyofHLPvXKjGiB\ndJj6gaM90d6UouPbVR1IYuf+hHR9sW18NksOEJ9cKRbUFR0xMz2DalMeOZjb/faE\nQ+aiMNL3gkQ7koYsZZKXI+YpwvqXwPhVQl7oEw5X4eKMPWWFGgDhUy8ZxKL9rSnp\nY3wOBwpQ8QKBgAd8ee5g0zvN5lpSqdpDJVzwSNDjZ2vZH8xbmxEIgY/YHl4+OoyI\nHDKDc81VMhoYlu9MdToWhzelCOSM1ZI72dUD0p15PI/E2xK5nlYAL4c2jldiiUqD\nK0A/gZ1aTE1W03G59LokK4JE7GYmd0IHgyD7AAFgg+cgY5N/IQ+b+itBAoGAGsxN\n6mCOWnDpYaJXxD1Wre6fR6RoX8mAagZy/vOyp4MpTA9oJRLe0tIJe4+mT21QyH4I\nx5W7k9UUyb/romsn31GFhn8JC/RgqKowMw4f0UvxlTMPVmewk0zLPwpCs6FfxON9\nWMs4bZfn6iIOBPnHWsttqan1bfqUbnrFOjnmUeECgYEAtIukXItZeX84zZhIWS+P\ny3idw/VI4pqE/26Uhte8iMYMauU3IEHLO12NieiVO6Z3+Uye32YkJqC2lSkl8Rr8\nbCYJiac1LE/+ClmqDMBYz0n8nTS+drQ4OJfDVWN5oMq4a3lXwu/yEo5tzhrwVx6N\ndvr/HzKndJEv+hMgXb4zOHM=\n-----END
+ PRIVATE KEY-----\n",<br />&nbsp; "client_email": "xyz@projectname.iam.gserviceaccount.com",<br />&nbsp; "client_id": "81281ye812yi",<br />&nbsp; "auth_uri": "https://accounts.google.com/o/oauth2sad/authqd",<br />&nbsp; "token_uri": "https://accounts.googlcdsvce.com/o/oascqsuth2/token",<br />&nbsp; "auth_provider_x509_cert_url": "https://www.googleapis.cSCCWom/oauth2/v1/certs",<br />&nbsp;
+ "client_x509_cert_url": 
+"https://www.gQQWDoogleapis.coaDQWQDWm/robot/v1/metadata/x509/gp-umesh%40my-live-staDWQDDCCZXCSCEWtus.iam.gserviceaccount.com"<br />}</span><br />
+<span style="background-color: white;"><br /></span>
+<span style="background-color: white;"><br /></span>
+<span style="background-color: white;"><br />
+&nbsp;Python code is straight forward to get things done.</span><br />
+<span style="background-color: white;"><br /></span>
+<span style="background-color: black;"><br />
+<span style="color: white;">import json</span></span><br />
+<span style="background-color: black;"><span style="color: white;">import sys</span></span><br />
+<span style="background-color: black;"><span style="color: white;">import os</span></span><br />
+<span style="background-color: black;"><span style="color: white;">import glob</span></span><br />
+<span style="background-color: black;"><span style="color: white;">import time</span></span><br />
+<span style="background-color: black;"><span style="color: white;">import datetime</span></span><br />
+<span style="background-color: black;"><span style="color: white;">import csv</span></span><br />
+<span style="background-color: black;"><span style="color: white;">from oauth2client.service_account import ServiceAccountCredentials</span></span><br />
+<span style="background-color: black;"><span style="color: white;">import pygsheets</span></span><br />
+<span style="background-color: black;"><span style="color: white;"><br /></span></span>
+<span style="background-color: black;"><span style="color: white;">pygsheets.client.GOOGLE_SHEET_CELL_UPDATES_LIMIT = 10000</span></span><br />
+<span style="background-color: black;"><span style="color: white;"><br /></span></span>
+<span style="background-color: black;"><span style="color: white;">def next_available_row(worksheet):</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; values_mat = worksheet.get_values(start=(1,1), end=(worksheet.rows,1), returnas='matrix')</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return len(values_mat)</span></span><br />
+<span style="background-color: black;"><span style="color: white;"><br /></span></span>
+<span style="background-color: black;"><span style="color: white;">def update_google_sheet(values_list,first_val):</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; first_row=['ip','live','last_ping'] # header</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; scope = ['https://spreadsheets.google.com/feeds']</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; gc = pygsheets.authorize(service_file='path to client_secret.json', outh_nonlocal=True)</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try:</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sh = gc.open("September2017")</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; except Exception as e:</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "Error &gt;&gt;",str(e)</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ sh = gc.create("September2017", 
+parent_id="0B2ufjjmoqsTFM1NhNHp5dUtSVjA") # this parent_id to make 
+sheets in one folder only</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try:</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; worksheet = sh.add_worksheet(title=str(first_val[0])+"d", rows="1390", cols="10")</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; worksheet.insert_rows(row=0, number=1, values=first_row)</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; index=1</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; except Exception as e:</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "Error in opening",str(e)</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; worksheet=sh.worksheet_by_title(str(first_val[0])+"d")</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "no of rows &gt;&gt;",worksheet.rows</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d_t_found = worksheet[0][0]</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; index = next_available_row(worksheet)</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "next available",index</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try:</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; worksheet = sh.add_worksheet(title=str(first_val[0])+"d", rows="1390", cols="30")</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; worksheet.insert_rows(row=0, number=1, values=first_row)</span></span><br />
+<span style="background-color: black;"><span style="color: white;"><br /></span>
+<span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; index=1</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; except Exception as e:</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "Error in opening",str(e)</span></span><br />
+<span style="background-color: black;"><span style="color: white;"><br /></span>
+<span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try:</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; worksheet=sh.worksheet_by_title(str(first_val[0])+"d")</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; except Exception as e:</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "Error in opening live sheet",str(e)</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; worksheet = sh.add_worksheet(title=str(first_val[0])+"d", rows="1390", cols="30")</span></span><br />
+<span style="background-color: black;"><span style="color: white;"><br /></span>
+<span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sh.share("xyz@example.com")</span></span><br />
+<span style="background-color: black;"><span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; worksheet.insert_rows(row=index, number=len(values_list), values=values_list)</span></span><br />
+<span style="background-color: white;"><br />
+&nbsp;Above code can be used to generate the google sheet ..</span><br />
+<span style="background-color: white;">in this script first_val i used a date for creating daily one sheet in one file.</span><br />
+<span style="background-color: white;">so i had monthly 1 file which have 30/31 sheets inside it.</span><br />
+<span style="background-color: white;"><br /></span>
+<span style="background-color: white;">you can put comments if any query -</span><br />
+<span style="background-color: white;">or email me- umeshsingatiya@gmail.com </span></div>
+<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/automation">automation</a>, <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/autoreport">autoreport</a>, <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/Google%20sheet">Google sheet</a>, <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/python">python</a>, <a rel='tag' href="http://linuxhelperssingatiya.blogspot.com/search/label/reporting">reporting</a></p>
+    </p>
+
+        </div>
+
+        <p class="post-footer">
+
+      <em>posted by umesh kumar Kumawat @ <a href="http://linuxhelperssingatiya.blogspot.in/2017/09/google-sheet-automation-using-python-api.html" title="permanent link">September 17, 2017</a></em> &nbsp;
+      
+         <a class="comment-link" href="http://linuxhelperssingatiya.blogspot.in/2017/09/google-sheet-automation-using-python-api.html#comment-form"location.href=http://linuxhelperssingatiya.blogspot.com/2017/09/google-sheet-automation-using-python-api.html#comment-form;><span style="text-transform:lowercase">0 Comments</span></a>
+      
+ <span class="item-control blog-admin pid-1047737047"><a style="border:none;" href="https://www.blogger.com/post-edit.g?blogID=7667983272254077387&postID=200471946790686167&from=pencil" title="Edit Post"><img class="icon-action" alt="" src="https://img2.blogblog.com/img/icon18_edit_allbkg.gif" height="18" width="18"></a></span>
+    </p>
+
+    </div>
+
+  <!-- End .post -->
+
+        <!-- Begin #comments -->
+ 
+
+  <!-- End #comments -->
+
+
+
+
+
+</div></div></div>
+
+<!-- End #main -->
+
+
+
+
+
+
+
+
+
+<!-- Begin #sidebar -->
+
+<div id="sidebar">
+
+    <!-- Begin #profile-container -->
+
+   <div id="profile-container"><h2 class="sidebar-title">About Me</h2>
+<dl class="profile-datablock"><dt class="profile-img"><a href="https://plus.google.com/114838996487871212675"><img src="//lh6.googleusercontent.com/-CsV0TMawdCw/AAAAAAAAAAI/AAAAAAAAFoI/MtuWKZtK-H0/s80-c/photo.jpg" width="80" height="80" alt="My Photo"></a></dt>
+<dd class="profile-data"><strong>Name:</strong> <a rel="author" href="https://plus.google.com/114838996487871212675"> umesh kumar Kumawat </a></dd>
+</dl>
+
+<p class="profile-link"><a rel="author" href="https://plus.google.com/114838996487871212675">View my complete profile</a></p></div>
+
+  <!-- End #profile -->
+
+
+
+    <!-- Begin .box -->
+
+  <div class="box"><div class="box2"><div class="box3">
+    
+        
+  <h2 class="sidebar-title">Links</h2>
+    <ul>
+    	<li><a href="https://news.google.com/">Google News</a></li>
+    	<li><a href="https://support.google.com/blogger/answer/41427">Edit-Me</a></li>
+    	<li><a href="https://support.google.com/blogger/answer/41427">Edit-Me</a></li>
+  </ul>
+  
+
+      <h2 class="sidebar-title">Previous Posts</h2>
+    <ul id="recently">
+    
+        <li><a href="http://linuxhelperssingatiya.blogspot.in/2017/10/how-to-connect-two-linux-machine.html">How to connect two linux machine</a></li>
+     
+        <li><a href="http://linuxhelperssingatiya.blogspot.in/2017/10/top-5-project-ideas-linux-python.html">Top 5 project ideas linux python 2017</a></li>
+     
+        <li><a href="http://linuxhelperssingatiya.blogspot.in/2017/10/how-to-know-which-proxies-are.html">How to know which proxies are communicating to my ...</a></li>
+     
+        <li><a href="http://linuxhelperssingatiya.blogspot.in/2017/09/blog-post.html">External RTC fix steps in Raspi jessie</a></li>
+     
+        <li><a href="http://linuxhelperssingatiya.blogspot.in/2017/09/how-to-improve-your-debug-skills.html">How to Improve your debug skills</a></li>
+     
+        <li><a href="http://linuxhelperssingatiya.blogspot.in/2017/09/common-used-linux-commands.html">Common used linux commands</a></li>
+     
+        <li><a href="http://linuxhelperssingatiya.blogspot.in/2017/09/google-sheet-automation-using-python-api.html">Google sheet automation  using python API</a></li>
+     
+        <li><a href="http://linuxhelperssingatiya.blogspot.in/2017/09/part-2-linux-hacks-how-to-know-time.html">how to know the time when conjob get executed</a></li>
+     
+        <li><a href="http://linuxhelperssingatiya.blogspot.in/2017/09/continouse-reading-of-file-which-is.html">how to Continouse read  file which is updating by ...</a></li>
+     
+  </ul>
+
+    
+  <h2 class="sidebar-title">Archives</h2>
+    <ul class="archive-list">
+   	  
+    	<li><a href="http://linuxhelperssingatiya.blogspot.in/2017/09/">September 2017</a></li>
+	  
+    	<li><a href="http://linuxhelperssingatiya.blogspot.in/2017/10/">October 2017</a></li>
+	  
+      
+
+  </ul>
+  
+      <p id="powered-by"><a href="https://www.blogger.com"><img src="//buttons.blogger.com/bloggerbutton1.gif" alt="Powered by Blogger" /></a></p>
+      <p id="blogfeeds">Subscribe to<br />Posts [<a target="_blank" href="http://linuxhelperssingatiya.blogspot.com/feeds/posts/default" type="application/atom+xml">Atom</a>]</p>
+
+        <!--
+
+    <p>This is a paragraph of text that could go in the sidebar.</p>
+
+    -->
+
+    </div></div></div>
+
+  <!-- End .box -->
+
+
+
+
+</div>
+
+<!-- End #sidebar -->
+
+
+
+
+
+
+
+
+
+<!-- Begin #footer -->
+
+<div id="footer"><div><div><hr />
+
+
+
+  <p><!-- This is an optional footer. If you want text here, place it inside these tags, and remove this comment. -->&nbsp;</p>
+
+
+
+</div></div></div>
+
+<!-- End #footer -->
+
+
+
+
+
+
+
+
+</div>
+
+<!-- End #content -->
+
+
+
+</body>
+
 </html>
